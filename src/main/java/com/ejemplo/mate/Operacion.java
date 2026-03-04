@@ -9,22 +9,21 @@ public class Operacion {
         this.num2 = num2;
     }
 
-    public double Sumar() {
+    public double sumar() {
         return num1 + num2;
     }
 
-    public double Restar() {
+    public double restar() {
         return num1 - num2;
     }
 
-    public double Multiplicar() {
+    public double multiplicar() {
         return num1 * num2;
     }
 
-    public double Dividir() {
+    public double dividir() {
         if (num2 == 0) {
-            System.out.println("Error: No se puede dividir entre cero.");
-            return 0; 
+            throw new ArithmeticException("Error: No se puede dividir entre cero.");
         }
         return num1 / num2;
     }
